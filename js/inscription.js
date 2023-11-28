@@ -6,7 +6,7 @@ formulaire.addEventListener('submit', async (e) =>{
     let allInput = e.target.querySelectorAll('input');
     
     allInput.forEach(element=> data.append(element.name, element.value));
-    fetch('https://cors-proxy.fringe.zone/http://localhost:3010/api/v1/user/create',{
+    fetch('http://localhost:3010/api/v1/user/create',{
         method:"POST",
         body:new URLSearchParams(data) 
     })
