@@ -10,7 +10,7 @@ formulaire.addEventListener('submit',e=> {
     data.append('password',password);
 
     console.log(formulaire);
-    fetch('http://localhost:3010/api/v1/auth/login',{
+    fetch('https://culture-numerique.onrender.com/api/v1/auth/login',{
         method:"POST",
         body:new URLSearchParams(data)
     })

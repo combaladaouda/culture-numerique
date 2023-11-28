@@ -6,7 +6,7 @@ formulaire.addEventListener('submit', async (e) =>{
     let allInput = e.target.querySelectorAll('input');
     
     allInput.forEach(element=> data.append(element.name, element.value));
-    fetch('http://localhost:3010/api/v1/user/create',{
+    fetch('https://culture-numerique.onrender.com/api/v1/user/create',{
         method:"POST",
         body:new URLSearchParams(data) 
     })
