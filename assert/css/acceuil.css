@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenue{
+    margin: 0 auto;
+    background-color: blue;
+    height: 10rem;
+    width: 15%;
+}
+
+button{
+    margin: 0 auto;
+    padding: 10%;
+}
