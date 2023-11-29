@@ -63,18 +63,26 @@ body {font-family: Arial, Helvetica, sans-serif;
     padding: 12px 20px;
     border-radius: 6px;
     border:  none;
+    font-weight: bold;
+  }
+  button:hover{
+    background-color: #a2ac1f;
   }
   .container {
     box-sizing : border-box;
-    background-color: green;
+    background-color: #D2DE32;
     padding:20px;
     width: 100%;
     max-width: 440px;
     margin:0 auto;
-    margin-top: 2rem;
+    margin-top: 6rem;
     border-radius: 20px;
+    
   }
+
  ::placeholder{
     font-weight: bold;
+    font-size: 1rem;
+    
    
  }

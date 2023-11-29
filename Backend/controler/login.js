@@ -5,10 +5,20 @@ class LoginControler{
         try {
             if(!requete.body.email || !requete.body.password) return reponse.status(401).json({message:'Tous les champs sont obligatoire'});
             const user = await User.findOne({email:requete.body.email});
-            if(!user) return reponse.status(202).json({message:"email incorrecte !"});
-            const passwordHach = await bcrypt.compare(requete.body.password,user.password)
+            if(!user){
+                return reponse.status(202).json({message:"email incorrecte !"});
+            } 
+            
+            else{
+                const passwordHach = await bcrypt.compare(requete.body.password,user.password)
+                const userData = {
+                    nom: user.nom,
+                    email:user.email
+                }
+
             if(!passwordHach) {return reponse.status(202).json({message:"Mot de passe incorrecte !"})};
-            return reponse.status(202).json({message:'Connexion effectuer !', data:{password:requete.body.password, email:requete.body.email}});           
+                return reponse.status(202).json({message:'Connexion effectuer !', data:userData});  
+            }
         } catch (error) {
             reponse.status(500).json({message:'Erreur survenue', error});
         }

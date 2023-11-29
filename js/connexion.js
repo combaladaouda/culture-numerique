@@ -10,12 +10,13 @@ formulaire.addEventListener('submit',e=> {
     data.append('password',password);
 
     console.log(formulaire);
-    fetch('https://culture-numerique.onrender.com/api/v1/auth/login',{
+    fetch('https://https://culture-numerique.onrender.com/api/v1/auth/login',{
         method:"POST",
         body:new URLSearchParams(data)
     })
     .then(res =>res.json())
     .then(succes =>{
+        console.log('connexion effectuer:',succes);
         if(succes.data){
             alert(succes.message);
             localStorage.setItem('sessions',JSON.stringify(succes.data))
@@ -25,3 +26,8 @@ formulaire.addEventListener('submit',e=> {
         }
     })
 })
+const sessions = localStorage.getItem('sessions');
+
+if (sessions !== null) {
+    window.location.href = "../corporate/acceuil.html";
+}
