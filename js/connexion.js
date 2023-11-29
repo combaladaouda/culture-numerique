@@ -26,6 +26,8 @@ formulaire.addEventListener('submit',e=> {
         }
     })
 })
+//verifier si la session n'est pas vide
+
 const sessions = localStorage.getItem('sessions');
 
 if (sessions !== null) {

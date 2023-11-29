@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import session from "express-session"
 import bdConnect from "./database/bd.js";
 import RouterUser from "./route/user.js";
 import RouterLogin from "./route/login.js";

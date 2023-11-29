@@ -21,6 +21,8 @@ formulaire.addEventListener('submit', async (e) =>{
     })
 })
 
+//verifier si la session n'est pas vide
+
 const sessions = localStorage.getItem('sessions');
 
 if (sessions !== null) {

@@ -51,7 +51,7 @@ body {font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-weight: bold;
 }
-.envoyer{
+/* .envoyer{
   background-color: white;
   color: green;
   padding: 12px 20px;
@@ -59,16 +59,28 @@ body {font-family: Arial, Helvetica, sans-serif;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+} */
+
+button{
+  padding: 12px 20px;
+  border-radius: 6px;
+  border:  none;
+  font-weight: bold;
+  
+}
+button:hover{
+  background-color: #a2ac1f;
 }
   
   .container {
-    box-sizing : border-box;
-    background-color:green;
-    padding:20px;
-    width: 100%;
-    max-width: 440px;
-    margin:0 auto;
-    margin-top: 2rem;
+      box-sizing : border-box;
+      background-color: #D2DE32;
+      padding:20px;
+      width: 100%;
+      max-width: 440px;
+      margin:0 auto;
+      margin-top: 6rem;
+      border-radius: 20px;
   }
   .creat{
    margin: 8rem;
@@ -80,5 +92,6 @@ body {font-family: Arial, Helvetica, sans-serif;
     color: black;
   }
  ::placeholder{
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 1rem;
  }

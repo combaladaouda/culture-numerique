@@ -11,6 +11,8 @@ class LoginControler{
             
             else{
                 const passwordHach = await bcrypt.compare(requete.body.password,user.password)
+                
+                //Objet pour afficher les infos dans la console
                 const userData = {
                     nom: user.nom,
                     email:user.email
