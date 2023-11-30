@@ -10,7 +10,7 @@ let deconnexion = document.querySelector('button');
 //variable pour afficher le nom
 let nom = document.querySelector(".aff");
 
-console.log('ma sessions :',typeof(sessions));
+//console.log('ma sessions :',typeof(sessions));
 
 //condifion pour verifier si la session est vide
 if (sessions === null) {
@@ -24,5 +24,6 @@ else{
 //Session de deconnexion
 deconnexion.addEventListener('click', (e)=>{
     localStorage.removeItem('sessions')
-    window.location.href = "../corporate/connexion.html";
+    //window.location.href = "../corporate/connexion.html";
+    window.location.href = "../index.html";
 })
